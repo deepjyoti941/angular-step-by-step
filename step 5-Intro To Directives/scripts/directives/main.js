@@ -5,7 +5,7 @@ myApp.directive('myAccordion', function() {
 		template: '<div class="accordion"><h5>Expand</h5>' +
             '<div class="accordion-content" ng-show="open" ng-transclude></div></div>',
         transclude: true,
-        scope: {},
+        scope: {}, //isolate scope
         link: function(scope, elm) {
             scope.open = false;
             // assume we have no jQuery.
